@@ -1,0 +1,84 @@
+/* General Styling */
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  background: #ffd655;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+:root{
+  --width: 1;
+  --height: 1;
+}
+/* Styling both Inputs */
+
+/* Remove Default Styling */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 15%;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/*Add Custom Styling */
+input[type=range]::-moz-range-thumb {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  background: #f39c1e;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  background: #ffc31a;
+  border-radius: 25px;
+}
+
+
+input[name=width]{
+  transform: rotate(90deg);
+  position: relative;
+  top: -200px;
+  left: 180px;
+}
+input[name=height]{
+  position: relative;
+}
+
+
+
+
+p{
+  font-size: 300px;
+  font-family: 'Abril Fatface';
+  color: #3995d1;
+  transform:scale(var(--width), var(--height));
+}
